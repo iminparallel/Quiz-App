@@ -1,8 +1,8 @@
 import React from "react";
 
-import { getAuthSession } from "@/lib/nextauth";
+import { getAuthSession } from "@/lib/next-auth";
 import { redirect } from "next/navigation";
-import QuizCreation from "@/components/forms/QuizCreation";
+//import QuizCreation from "@/components/forms/QuizCreation";
 
 export const metadata = {
   title: "Quiz | Quizzzy",
@@ -20,7 +20,8 @@ const Quiz = async ({ searchParams }: Props) => {
   if (!session?.user) {
     redirect("/");
   }
-  return <QuizCreation topic={searchParams.topic ?? ""} />;
+  return <>quiz</>;
+  //<QuizCreation topic={searchParams.topic ?? ""} />;
 };
 
 export default Quiz;
